@@ -19,7 +19,7 @@ body {
    display: flex;
    flex-direction: column;
    padding: 20px;
-   max-width: 800px;
+   max-width: 900px;
    gap: 20px;
    background: rgba(2, 35, 60, 0.85);
    box-shadow: 0 8px 32px 0 rgba(17, 17, 29, 0.37);
@@ -28,7 +28,7 @@ body {
    border-radius: 10px;
 }
 .content {
-   padding: 20px;
+   padding: 30px;
    border: 1px solid #3d4a73; 
    border-radius: 10px;
 }
@@ -38,6 +38,9 @@ body {
    z-index: -999;
    position: absolute;
    transition: all 0.3s ease 0s;
+}
+.typing-text {
+   font-size: 20px;
 }
 .typing-text span {
    position: relative;
@@ -64,13 +67,8 @@ body {
    border-radius: 5px;
    background: rgb(1, 127, 245);
    transition: all 0.3s ease 0s;
-   animation: blink 1s ease-in-out infinite;
 } 
-@keyframes blink {
-   50% {
-       opacity: 1;
-   }
-}
+
 .typing-text span.incorrect {
    color: rgb(201, 17, 17);
    transition: all 0.1s ease 0s;
@@ -81,8 +79,8 @@ body {
    justify-content: space-between;
    border: 1px solid #3d4a73;
    border-radius: 10px;
-   padding: 10px;
-
+   padding: 10px 30px;
+   
 }
 .stats__item {
    display: flex;
@@ -90,7 +88,12 @@ body {
    font-size: 14px;
 }
 .stats__item div {
+   font-size: 20px;
    color: rgb(20, 168, 168);
+}
+.stats__item span {
+   font-size: 20px;
+
 }
 .restart-btn {
    cursor: pointer;
