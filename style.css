@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+body {
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   background: rgb(42,66,65);
+   background: linear-gradient(180deg, #495e7f 0%, #1c2a3f  100%);
+   min-height: 100vh;
+   padding: 15px;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   max-width: 800px;
+   gap: 20px;
+   background: rgba(2, 35, 60, 0.85);
+   box-shadow: 0 8px 32px 0 rgba(17, 17, 29, 0.37);
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   color: #95add2;
+   border-radius: 10px;
+}
+.content {
+   padding: 20px;
+   border: 1px solid #3d4a73; 
+   border-radius: 10px;
+}
+
+.input__text {
+   opacity: 0;
+   z-index: -999;
+   position: absolute;
+   transition: all 0.3s ease 0s;
+}
+.typing-text span {
+   position: relative;
+   overflow: hidden;
+   transition: all 0.3s ease 0s;
+}
+.typing-text span.active {
+   
+   transition: all 0.1s ease 0s;
+   color: rgb(1, 127, 245);
+}
+.typing-text span.correct {
+   transition: all 0.1s ease 0s;
+   color: rgb(27, 223, 223);
+}
+
+.typing-text span.active::before {
+   content: "";
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   bottom: 0;
+   left: 0px;
+   border-radius: 5px;
+   background: rgb(1, 127, 245);
+   transition: all 0.3s ease 0s;
+   animation: blink 1s ease-in-out infinite;
+} 
+@keyframes blink {
+   50% {
+       opacity: 1;
+   }
+}
+.typing-text span.incorrect {
+   color: rgb(201, 17, 17);
+   transition: all 0.1s ease 0s;
+
+}
+.stats {
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid #3d4a73;
+   border-radius: 10px;
+   padding: 10px;
+
+}
+.stats__item {
+   display: flex;
+   gap: 10px;
+   font-size: 14px;
+}
+.stats__item div {
+   color: rgb(20, 168, 168);
+}
+.restart-btn {
+   cursor: pointer;
+   display: flex;
+   margin: 0 auto;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   padding: 10px;
+   color: #bdcde4;
+   background: #223679;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   transition: background 0.3s ease 0s;
+}
+.restart-btn:hover {
+   background: #324fb1;
+}
